@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --findit-darkest: #0b2e1f;
+  --findit-dark: #14532d;
+  --findit-green: #16a34a;
+  --findit-bright: #22c55e;
+  --findit-lime: #bef264;
+  --findit-mint: #dcfce7;
+  --findit-pale: #f0fdf4;
+  --findit-text: #10261b;
+  --findit-grey: #4b6356;
+  --findit-line: #cfe5d6;
+  font-family: 'Figtree', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--findit-text);
+  background: var(--findit-pale);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--findit-pale);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}

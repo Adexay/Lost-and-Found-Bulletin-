@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Lost & Found{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'items/styles.css' %}" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="{% url 'home' %}" class="brand">
+          <span class="brand-mark">L&F</span>
+          <span>Lost & Found</span>
+        </a>
+        <nav class="nav-links">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'browse_items' %}">Browse</a>
+          <a href="{% url 'report_item' %}">Report item</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <h3>Lost & Found</h3>
+          <p>Helping communities reunite valuable belongings with their owners.</p>
+        </div>
+        <div class="footer-links">
+          <a href="{% url 'browse_items' %}">Browse items</a>
+          <a href="{% url 'report_item' %}">Submit a report</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
